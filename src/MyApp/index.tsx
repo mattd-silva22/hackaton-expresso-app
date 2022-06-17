@@ -1,3 +1,4 @@
+import ChatBot from "../compoments/Chatbot";
 import Footer from "../compoments/Footer";
 import { Header } from "../compoments/Header";
 import FilterRow, { ICategories } from "../compoments/Molecules/FilterRow";
@@ -61,6 +62,9 @@ export function MyApp() {
       <SearchBar></SearchBar>
       <FilterRow servicesTags={categories} />
       <h1>ola</h1>
+      <Footer></Footer>
+
+      <ChatBot></ChatBot>
     </Container>
   );
 }
