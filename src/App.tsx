@@ -1,8 +1,4 @@
-
-import { MyApp } from './MyApp';
-
-
-
+import { MyApp } from "./MyApp";
 
 function App() {
   return (
