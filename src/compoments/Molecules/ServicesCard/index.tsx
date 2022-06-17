@@ -28,11 +28,13 @@ const ServicesCard: React.FC<IServicesCard> = ({ service }) => {
           <img
             src={require("../../../assets/heart_enabled.svg").default}
             alt="Favoritar serviço"
+            height={24}
           />
         ) : (
           <img
             src={require("../../../assets/heart_disabled.svg").default}
             alt="Desfavoritar serviço"
+            height={24}
           />
         )}
       </div>
@@ -41,9 +43,9 @@ const ServicesCard: React.FC<IServicesCard> = ({ service }) => {
 };
 
 const ServicesCardWrapper = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: row;
+  width: 100%;
 
   border-radius: 24px;
   height: 122px;
@@ -67,6 +69,7 @@ const ServicesCardWrapper = styled.div`
 
   .info-container {
     display: flex;
+    flex-grow: 2;
     flex-direction: column;
     max-height: 122px;
 
@@ -96,7 +99,7 @@ const ServicesCardWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding: 16px;
+    padding: 18px;
   }
 `;
 

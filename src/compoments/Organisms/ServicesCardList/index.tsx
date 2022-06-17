@@ -19,6 +19,8 @@ const ServicesCardList: React.FC<IServicesCardList> = ({ services }) => {
 
 const ServicesCardListWrapper = styled.div`
   display: flex;
+  width: 100%;
+  max-width: 600px;
   flex-direction: column;
 
   padding: 24px;

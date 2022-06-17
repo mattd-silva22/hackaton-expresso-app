@@ -1,9 +1,14 @@
 import { MyApp } from "./MyApp";
+import { PagesProvider } from "./Providers/PagesContext";
+import { GlobalStyles } from "./styles/Global";
 
 function App() {
   return (
     <>
-      <MyApp></MyApp>
+      <GlobalStyles />
+      <PagesProvider>
+        <MyApp />
+      </PagesProvider>
     </>
   );
 }

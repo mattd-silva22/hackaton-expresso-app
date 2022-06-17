@@ -28,6 +28,7 @@ const FilterRowContainer = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
+  padding: 0 24px;
 
   &::-webkit-scrollbar {
     display: none;
@@ -36,7 +37,6 @@ const FilterRowContainer = styled.div`
   -ms-overflow-style: none;
 
   overflow-y: scroll;
-  padding: 0 12px;
 `;
 
 export default FilterRow;
