@@ -1,0 +1,40 @@
+[{
+    "id" : "1",
+    "title" : "Agricultura e pecuária",
+    "color" : "",
+    "icon" : ""
+},
+
+{
+    "id" : "2",
+    "title" : "Assistência Social",
+    "color" : "",
+    "icon" : ""
+},
+
+{
+    "id" : "3",
+    "title" : "Veículos e condutores",
+    "color" : "",
+    "icon" : ""
+},
+
+{
+    "id" : "4",
+    "title" : "Educação",
+    "color" : "",
+    "icon" : ""
+},
+{
+    "id" : "5",
+    "title" : "Cultura",
+    "color" : "",
+    "icon" : ""
+},
+{
+    "id" : "6",
+    "title" : "Turismo",
+    "color" : "",
+    "icon" : ""
+}
+]

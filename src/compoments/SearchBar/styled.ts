@@ -26,14 +26,16 @@ export const Content = styled.div`
     .search-bar {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         background-color: #E6E6E6;
-        padding: 1.2rem 2.0rem;
+        padding: 0.5rem 1.0rem;
         border-radius: 50px;
         gap: 0.5rem;
 
-        width: 100%;
+        font-size: 1.2rem;
+       
         width: 360px;
+        width: 90%;
 
         
 
@@ -49,7 +51,15 @@ export const Content = styled.div`
             border : none;
             font-size: 1.6rem;
             width: 100%;
-            
+            padding: 0px 1.0rem;
+
+            color: var(--n-700);
+          
+        }
+
+
+        svg {
+            width: 1.8rem;
         }
     }
 

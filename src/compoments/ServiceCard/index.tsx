@@ -1,6 +1,13 @@
+import { CardContainer, CardContent } from "./styles";
+
 export function ServiceCard() {
     
     return (
-        <h1> meu service card</h1>
+        <CardContainer>
+            <CardContent>
+                <h1> meu card </h1>
+            </CardContent>
+
+        </CardContainer>
     )
 }
