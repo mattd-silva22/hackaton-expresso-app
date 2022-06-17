@@ -9,7 +9,7 @@ export function SearchBar() {
     return (
         <Container>
             <Content>
-                <div className="search-pokemon-bar">
+                <div className="search-bar">
 
                     <div className="search-bar">
                         

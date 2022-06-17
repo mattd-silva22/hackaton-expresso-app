@@ -1,3 +1,4 @@
+import Footer from "../compoments/Footer";
 import { Header } from "../compoments/Header";
 import FilterRow, { ICategories } from "../compoments/Molecules/FilterRow";
 import { SearchBar } from "../compoments/SearchBar";
