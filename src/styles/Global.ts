@@ -70,7 +70,7 @@ export const GlobalStyles = styled.createGlobalStyle`
   /* set defalut rem size and fonts */
 
   html {
-    font-family: 'Sora', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 62.5%;
   }
 

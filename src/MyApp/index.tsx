@@ -1,3 +1,4 @@
+import Footer from "../compoments/Footer";
 import { Header } from "../compoments/Header";
 import { SearchBar } from "../compoments/SearchBar";
 import { GlobalStyles } from "../styles/Global";
@@ -13,6 +14,7 @@ export function MyApp() {
             <Header></Header>
             <SearchBar></SearchBar>
             <h1>ola</h1>
+            <Footer></Footer>
         </Container>
     )
 }
