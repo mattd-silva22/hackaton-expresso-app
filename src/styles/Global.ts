@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 // Workaroud for https://github.com/styled-components/vscode-styled-components/issues/175
-const styled = { createGlobalStyle }
+const styled = { createGlobalStyle };
 
 export const GlobalStyles = styled.createGlobalStyle`
   /* Box sizing rules */
@@ -15,6 +15,15 @@ export const GlobalStyles = styled.createGlobalStyle`
     --primary-light: #165bd4;
     --primary-mid: #0f3f93;
     --primary-dark: #052153;
+
+    --neuter: #363434;
+    --background-gradient: linear-gradient(
+      124.21deg,
+      #a7ae90 0%,
+      #6ce4b9 97.06%
+    );
+
+    --white: #ffffff;
 
     --n-100: #f2f2fa;
     --n-200: #e1e1e6;   
@@ -79,8 +88,8 @@ export const GlobalStyles = styled.createGlobalStyle`
   }
 
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-  ul[role='list'],
-  ol[role='list'] {
+  ul[role="list"],
+  ol[role="list"] {
     list-style: none;
   }
 
@@ -163,4 +172,4 @@ export const GlobalStyles = styled.createGlobalStyle`
   #__next {
     isolation: isolate;
   }
-`
+`;
