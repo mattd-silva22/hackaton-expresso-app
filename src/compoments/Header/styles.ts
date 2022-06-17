@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.header`
   display: flex;
@@ -6,14 +6,12 @@ export const Container = styled.header`
   justify-content: center;
   width: 100%;
   height: 13rem;
-  
 
- 
   border-radius: 0px 0px 8px 8px;
 
   //background-color: rgba(230, 230, 230, 0.2);
-  background-color: #0B7675;
-`
+  background-color: var(--primary);
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -99,7 +97,7 @@ export const Content = styled.div`
       transform: rotate(45deg) translate(-9px, -8px);
     }
   }
-`
+`;
 export const RespNavbar = styled.div`
   #nav-resp.active {
     display: flex;
@@ -170,4 +168,4 @@ export const RespNavbar = styled.div`
   #nav-resp {
     display: none;
   }
-`
+`;

@@ -1,26 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import ServicesTag from "../../Atoms/ServicesTag";
-
-// import { Container } from './styles';
-
-export interface ICategories {
-  id: string | number;
-  title: string;
-  enabled: boolean;
-}
+import { CategoriesModel } from "../../../models/services.model";
+import ServicesTag from "../../Atoms/CategoryTag";
 
 interface FilterRowProps {
-  servicesTags: ICategories[];
+  categoriesTags: CategoriesModel[];
 }
 
-const FilterRow: React.FC<FilterRowProps> = ({ servicesTags }) => {
+const FilterRow: React.FC<FilterRowProps> = ({ categoriesTags }) => {
   return (
     <FilterRowContainer>
-      {servicesTags.map((service) => (
+      {categoriesTags.map((category) => (
         <ServicesTag
-          title={service.title}
-          enabled={service.enabled}
+          key={category.id}
+          title={category.title}
+          enabled={category.enabled}
           size="medium"
         />
       ))}
