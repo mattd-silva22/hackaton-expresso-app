@@ -6,8 +6,7 @@ export default function Footer() {
     <Container>
         <Content>
             <nav className='footer-nav'>
-                <ul>
-                    <li className="footer-nav-item">
+                
 
                         <div className="footer-nav-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,9 +16,9 @@ export default function Footer() {
                             <p>Home</p>
                         </div>
                         
-                    </li>
+                    
 
-                    <li className="footer-nav-item">
+                    
                         <div className="footer-nav-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3 6C3 4.34315 4.34315 3 6 3H8.67963C9.34834 3 9.9728 3.3342 10.3437 3.8906L11.4063 5.4844C11.7772 6.0408 12.4017 6.375 13.0704 6.375H18C19.6569 6.375 21 7.71815 21 9.375V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6Z" stroke="#727171" stroke-width="2"/>
@@ -27,9 +26,9 @@ export default function Footer() {
 
                             <p>Categorias</p>
                         </div>
-                    </li>
+                    
 
-                    <li className="footer-nav-item">
+                    
                         <div className="footer-nav-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 13.9021 3.5901 15.6665 4.59721 17.1199C4.70168 17.2707 4.7226 17.4653 4.64529 17.6317L3.42747 20.2519C3.23699 20.5853 3.47768 21 3.86159 21H12Z" stroke="#727171" stroke-width="2"/>
@@ -41,9 +40,9 @@ export default function Footer() {
                             <p>Assistente</p>
                         </div>
                         
-                    </li>
+                    
 
-                    <li className="footer-nav-item">
+                    
                         <div className="footer-nav-icon">
                             
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,8 +52,8 @@ export default function Footer() {
                             <p>Seus dados</p>
                         </div>
                         
-                    </li>
-                </ul>
+                    
+                
             </nav>
         </Content>
     </Container>
@@ -89,24 +88,28 @@ const Content = styled.div`
 
     
 
+    
+
     .footer-nav {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        width: 80%;
+        width: 100%;
 
+        gap: 7.0rem;
+
+        @media(max-width: 720px){
+            &{
+                gap: 2.5rem;
+            }
+        }
+
+        
  
 
-        ul {
-            display: flex;
-
-            list-style: none;
-
-            gap: 7.0rem;
-        }
     }
-
+    
     .footer-nav-icon {
         display: flex;
         align-items: center;
@@ -117,6 +120,22 @@ const Content = styled.div`
         font-weight: 700;
 
         color: #727171;
+
+        text-align: center;
+        
+        
+
+        
+
+        p {
+            white-space: nowrap;
+
+            @media(max-width: 720px){
+            &{
+                font-size: 1.2rem;
+            }
+        }
+        }
 
        
     }

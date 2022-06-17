@@ -61,6 +61,7 @@ export function MyApp() {
       <SearchBar></SearchBar>
       <FilterRow servicesTags={categories} />
       <h1>ola</h1>
+      <Footer></Footer>
     </Container>
   );
 }
