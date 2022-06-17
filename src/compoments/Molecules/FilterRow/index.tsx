@@ -5,6 +5,7 @@ import ServicesTag from "../../Atoms/ServicesTag";
 // import { Container } from './styles';
 
 export interface ICategories {
+  id: string | number;
   title: string;
   enabled: boolean;
 }

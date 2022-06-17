@@ -1,17 +1,17 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import Bubble from "../../../animations/Bubble/Bubble";
-import bubbleUp from "../../../animations/Bubble/Bubble-up";
-
-// import { Container } from './styles';
 
 export interface IServicesTag {
   title: string;
-  enabled: boolean;
+  enabled?: boolean;
   size: "small" | "medium" | "large";
 }
 
-const ServicesTag: React.FC<IServicesTag> = ({ enabled, title, size }) => {
+const ServicesTag: React.FC<IServicesTag> = ({
+  enabled = false,
+  title,
+  size,
+}) => {
   return (
     <ServicesTagWrapper enabled={enabled} size={size}>
       <p>{title}</p>

@@ -6,38 +6,47 @@ import { Container } from "./styles";
 
 const categories: ICategories[] = [
   {
+    id: 1,
     title: "Assistencia",
     enabled: false,
   },
   {
+    id: 2,
     title: "Assistencia",
     enabled: false,
   },
   {
+    id: 3,
     title: "Assistencia",
     enabled: false,
   },
   {
+    id: 3,
     title: "Assistencia",
     enabled: false,
   },
   {
+    id: 4,
     title: "Assistencia",
     enabled: false,
   },
   {
+    id: 5,
     title: "Assistencia",
     enabled: false,
   },
   {
+    id: 6,
     title: "Assistencia",
     enabled: false,
   },
   {
+    id: 7,
     title: "Assistencia",
     enabled: false,
   },
   {
+    id: 8,
     title: "Assistencia",
     enabled: false,
   },
