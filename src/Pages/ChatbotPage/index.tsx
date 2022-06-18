@@ -88,6 +88,8 @@ const messages: IChatbotMessage[] = [
 const ChatbotPage: React.FC = () => {
   const { modalVisible, setModalVisible } = useChatbot();
 
+  
+
   return (
     <Modal onClose={() => setModalVisible(false)} show={modalVisible}>
       <ChatbotHeader onBack={() => setModalVisible(false)} />
