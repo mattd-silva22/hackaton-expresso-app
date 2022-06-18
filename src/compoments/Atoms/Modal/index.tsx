@@ -4,11 +4,9 @@ import styled, { css } from "styled-components";
 
 interface ModalProps {
   show: boolean;
-  onClose: () => void;
 }
 
 const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
-  onClose,
   show,
   children,
 }) => {
@@ -54,6 +52,7 @@ const ModalBody = styled.div<ModalBodyProps>`
   .modal-container {
     position: absolute;
     width: 100%;
+    min-height: 100%;
     padding-bottom: 120px;
     max-width: 100vw;
     right: 0;

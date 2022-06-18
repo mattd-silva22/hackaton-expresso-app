@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ServicesModel } from "../../../models/services.model";
+import { useServices } from "../../../Providers/ServicesContext";
 import ServicesTag from "../../Atoms/CategoryTag";
 
 interface IServicesCard {
@@ -8,6 +9,7 @@ interface IServicesCard {
 }
 
 const ServicesCard: React.FC<IServicesCard> = ({ service }) => {
+  const { favorite } = useServices();
   return (
     <ServicesCardWrapper>
       <div className="icon-container">
@@ -32,12 +34,14 @@ const ServicesCard: React.FC<IServicesCard> = ({ service }) => {
             src={require("../../../assets/heart_enabled.svg").default}
             alt="Favoritar serviço"
             height={22}
+            onClick={() => favorite(service.id)}
           />
         ) : (
           <img
             src={require("../../../assets/heart_disabled.svg").default}
             alt="Desfavoritar serviço"
             height={22}
+            onClick={() => favorite(service.id)}
           />
         )}
       </div>
@@ -103,6 +107,7 @@ const ServicesCardWrapper = styled.div`
     justify-content: flex-end;
     align-items: flex-end;
     padding: 18px;
+    cursor: pointer;
   }
 `;
 

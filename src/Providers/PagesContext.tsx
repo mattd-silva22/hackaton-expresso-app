@@ -21,7 +21,6 @@ export const PagesProvider: React.FC<React.PropsWithChildren> = ({
   children,
 }) => {
   const [currentPage, setCurrentPage] = useState<Pages>(Pages.HOME);
-  console.log(currentPage);
 
   function changePage(page: Pages) {
     setCurrentPage(page);

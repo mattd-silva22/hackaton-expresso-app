@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const MessageInput: React.FC = () => {
+interface IMessageInput {
+  sendMessage: (msg: string) => void;
+}
+
+const MessageInput: React.FC<IMessageInput> = ({ sendMessage }) => {
+  const [message, setMessage] = useState<string>("");
+  function onSubmit(boolean?: boolean) {
+    if (!!message && boolean) {
+      sendMessage(message);
+      setMessage("");
+    }
+  }
+
   return (
     <MessageInputWrapper>
       <button>
@@ -11,9 +23,18 @@ const MessageInput: React.FC = () => {
         />
       </button>
 
-      <input placeholder="Escreva aqui..." />
+      <input
+        placeholder="Escreva aqui..."
+        value={message}
+        onChange={(e: any) => {
+          setMessage(e.currentTarget.value as string);
+        }}
+        onKeyUp={(e) => {
+          onSubmit(e.key === "Enter");
+        }}
+      />
 
-      <button>
+      <button type="button" onClick={() => onSubmit(true)}>
         <img
           src={require("../../../assets/send.svg").default}
           alt="Adicionar arquivos"

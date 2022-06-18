@@ -6,6 +6,7 @@ export interface ICategoryTag {
   enabled?: boolean;
   size: "small" | "medium" | "large";
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 const CategoryTag: React.FC<ICategoryTag> = ({
@@ -13,9 +14,15 @@ const CategoryTag: React.FC<ICategoryTag> = ({
   title,
   size,
   disabled = false,
+  onClick,
 }) => {
   return (
-    <CategoryTagWrapper enabled={enabled} size={size} disabled={disabled}>
+    <CategoryTagWrapper
+      enabled={enabled}
+      size={size}
+      disabled={disabled}
+      onClick={onClick}
+    >
       <p>{title}</p>
     </CategoryTagWrapper>
   );

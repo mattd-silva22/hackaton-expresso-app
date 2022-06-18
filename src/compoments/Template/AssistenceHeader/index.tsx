@@ -14,7 +14,7 @@ const AssistenceHeader: React.FC = () => {
       <div className="header-container">
         <h1>Olá, sou a</h1>
         <h1>
-          <strong>Assistente</strong>
+          <strong>Iasmin</strong>
           <img
             className="tchau"
             src={require("../../../assets/tchau.svg").default}

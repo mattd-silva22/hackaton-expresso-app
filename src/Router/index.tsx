@@ -1,4 +1,3 @@
-import ChatBot from "../compoments/Chatbot";
 import AssistencePage from "../Pages/AssistancePage";
 import CategoriesPage from "../Pages/CategoriesPage";
 import ProfilePage from "../Pages/ProfilePage";
@@ -15,8 +14,6 @@ export function MyApp() {
       {currentPage === Pages.CATEGORIES && <CategoriesPage />}
       {currentPage === Pages.ASSISTENCE && <AssistencePage />}
       {currentPage === Pages.PROFILE && <ProfilePage />}
-
-      <ChatBot />
     </Container>
   );
 }

@@ -1,22 +1,15 @@
-import moment from "moment";
 import React from "react";
 import styled, { css } from "styled-components";
 
 export interface IChatbotMessage {
   message: string;
-  date: Date;
-  received: boolean;
+  who: "user" | "server";
 }
 
-const ChatbotMessage: React.FC<IChatbotMessage> = ({
-  date,
-  message,
-  received,
-}) => {
+const ChatbotMessage: React.FC<IChatbotMessage> = ({ message, who }) => {
   return (
-    <ChatbotMessageWrapper received={received}>
-      <span className="message-container">{message}</span>
-      <span className="date-container">{moment(date).format("LT")}</span>
+    <ChatbotMessageWrapper received={who === "server"}>
+      <p className="message-container">{message}</p>
     </ChatbotMessageWrapper>
   );
 };

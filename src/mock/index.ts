@@ -6,7 +6,7 @@ export const services: ServicesModel[] = [
     status: true,
     categoryId: 1,
     icon: "document",
-    title: "Obter carteira de identidade - 2ª via",
+    title: "Obter carteira de identidade - 1ª via",
     subTitle: "Possui custos",
     isFavorite: true,
     category: {
@@ -63,7 +63,7 @@ export const categories: CategoriesModel[] = [
     id: 2,
     title: "Assistência Social",
     enabled: false,
-    icon: "agripecu",
+    icon: "hand",
     color: "#525150",
   },
   {

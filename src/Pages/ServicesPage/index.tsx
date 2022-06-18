@@ -3,9 +3,10 @@ import FilterRow from "../../compoments/Molecules/FilterRow";
 import ServicesCardList from "../../compoments/Organisms/ServicesCardList";
 import { SearchBar } from "../../compoments/Atoms/SearchBar";
 import HomeTemplate from "../../compoments/Template/HomeTemplate";
-import { categories, services } from "../../mock";
+import { useServices } from "../../Providers/ServicesContext";
 
 const ServicesPage: React.FC = () => {
+  const { services, categories } = useServices();
   return (
     <HomeTemplate>
       <SearchBar />
