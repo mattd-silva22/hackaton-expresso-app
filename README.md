@@ -32,13 +32,13 @@
 
 #### Página de Inicial
 
-![](https://github.com/mattd-silva22/hackaton-expresso-app/blob/master/gitimgs/inicio.png)
+![](https://github.com/mattd-silva22/hackaton-expresso-app/blob/main/gitimgs/inicio.png)
 
 #### Página de filtro de categorias
 
-![](https://github.com/mattd-silva22/hackaton-expresso-app/blob/master/gitimgs/categorias.png)
+![](https://github.com/mattd-silva22/hackaton-expresso-app/blob/main/gitimgs/categorias.png)
 
 
 #### Página de suporte ao cliente
 
-![](https://github.com/mattd-silva22/hackaton-expresso-app/blob/master/gitimgs/assistencia.png)
+![](https://github.com/mattd-silva22/hackaton-expresso-app/blob/main/gitimgs/assistencia.png)
