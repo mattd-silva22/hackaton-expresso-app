@@ -1,13 +1,11 @@
 import React from "react";
-import HomeTemplate from "../../compoments/Template/HomeTemplate";
-
-// import { Container } from './styles';
+import AssistanceTemplate from "../../compoments/Template/AssistanceTemplate";
 
 const AssistencePage: React.FC = () => {
   return (
-    <HomeTemplate>
+    <AssistanceTemplate>
       <div></div>
-    </HomeTemplate>
+    </AssistanceTemplate>
   );
 };
 
