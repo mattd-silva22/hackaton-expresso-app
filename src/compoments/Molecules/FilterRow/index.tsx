@@ -1,29 +1,39 @@
 import React from "react";
 import styled from "styled-components";
-import ServicesTag from "../../Atoms/ServicesTag";
-
-// import { Container } from './styles';
-
-export interface ICategories {
-  id: string | number;
-  title: string;
-  enabled: boolean;
-}
+import { CategoriesModel } from "../../../models/services.model";
+import { useServices } from "../../../Providers/ServicesContext";
+import ServicesTag from "../../Atoms/CategoryTag";
 
 interface FilterRowProps {
-  servicesTags: ICategories[];
+  categoriesTags: CategoriesModel[];
 }
 
-const FilterRow: React.FC<FilterRowProps> = ({ servicesTags }) => {
+const FilterRow: React.FC<FilterRowProps> = ({ categoriesTags }) => {
+  const { addOrRemoveFilter, isFavorite, setIsFavorite } = useServices();
   return (
     <FilterRowContainer>
-      {servicesTags.map((service) => (
-        <ServicesTag
-          title={service.title}
-          enabled={service.enabled}
-          size="medium"
-        />
-      ))}
+      <ServicesTag
+        title="Favoritos"
+        enabled={isFavorite}
+        size="medium"
+        onClick={() => setIsFavorite(!isFavorite)}
+      />
+      {categoriesTags
+        .sort((a, b) => {
+          if (a.enabled && !b.enabled) {
+            return -1;
+          }
+          return 0;
+        })
+        .map((category) => (
+          <ServicesTag
+            key={category.id}
+            title={category.title}
+            enabled={category.enabled}
+            size="medium"
+            onClick={() => addOrRemoveFilter(category.id as string)}
+          />
+        ))}
     </FilterRowContainer>
   );
 };
@@ -34,6 +44,7 @@ const FilterRowContainer = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
+  padding: 0 24px;
 
   &::-webkit-scrollbar {
     display: none;
@@ -42,7 +53,6 @@ const FilterRowContainer = styled.div`
   -ms-overflow-style: none;
 
   overflow-y: scroll;
-  padding: 0 12px;
 `;
 
 export default FilterRow;

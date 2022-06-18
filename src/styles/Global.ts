@@ -16,6 +16,10 @@ export const GlobalStyles = styled.createGlobalStyle`
     --primary-mid: #0f3f93;
     --primary-dark: #052153;
 
+    --primary: #0b7675;
+    --secondary: #f7b518;
+
+    --gray-light: #727171;
     --neuter: #363434;
     --background-gradient: linear-gradient(
       124.21deg,
@@ -26,7 +30,7 @@ export const GlobalStyles = styled.createGlobalStyle`
     --white: #ffffff;
 
     --n-100: #f2f2fa;
-    --n-200: #e1e1e6;   
+    --n-200: #e1e1e6;
     --n-300: #a8a8b3;
     --n-700: #29292e;
     --n-800: #202024;
@@ -79,7 +83,7 @@ export const GlobalStyles = styled.createGlobalStyle`
   /* set defalut rem size and fonts */
 
   html {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 62.5%;
   }
 
