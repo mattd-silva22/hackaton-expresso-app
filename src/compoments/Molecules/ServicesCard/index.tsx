@@ -11,7 +11,10 @@ const ServicesCard: React.FC<IServicesCard> = ({ service }) => {
   return (
     <ServicesCardWrapper>
       <div className="icon-container">
-        <img alt={service.title} src={service.icon} />
+        <img
+          alt={service.title}
+          src={require(`../../../assets/services/${service.icon}.svg`)}
+        />
       </div>
 
       <div className="info-container">
@@ -28,13 +31,13 @@ const ServicesCard: React.FC<IServicesCard> = ({ service }) => {
           <img
             src={require("../../../assets/heart_enabled.svg").default}
             alt="Favoritar serviço"
-            height={24}
+            height={22}
           />
         ) : (
           <img
             src={require("../../../assets/heart_disabled.svg").default}
             alt="Desfavoritar serviço"
-            height={24}
+            height={22}
           />
         )}
       </div>

@@ -1,48 +1,106 @@
+import React from "react";
 import styled from "styled-components";
+import { usePages } from "../../../Providers/PagesContext";
 
-export default function Footer() {
+const Footer: React.FC = () => {
+  const { Pages, changePage, currentPage } = usePages();
+
   return (
     <Container>
       <Content>
         <nav className="footer-nav">
-          <div className="footer-nav-icon">
-            <img
-              src={require("../../../assets/home_4.svg").default}
-              alt="Home"
-            />
-            <p>Home</p>
+          <div
+            className="footer-nav-icon"
+            onClick={() => changePage(Pages.HOME)}
+          >
+            {currentPage === Pages.HOME ? (
+              <img
+                src={require("../../../assets/menu/home_enabled.svg").default}
+                alt="Home"
+              />
+            ) : (
+              <img
+                src={require("../../../assets/menu/home_disabled.svg").default}
+                alt="Home"
+              />
+            )}
+            <p
+              style={{
+                color: currentPage === Pages.HOME ? "#0B7675" : "#727171",
+              }}
+            >
+              Início
+            </p>
           </div>
 
-          <div className="footer-nav-icon">
-            <img
-              src={require("../../../assets/folder.svg").default}
-              alt="Categorias"
-            />
+          <div
+            className="footer-nav-icon"
+            onClick={() => changePage(Pages.CATEGORIES)}
+          >
+            {currentPage === Pages.CATEGORIES ? (
+              <img
+                src={require("../../../assets/menu/folder_enabled.svg").default}
+                alt="Categorias"
+              />
+            ) : (
+              <img
+                src={
+                  require("../../../assets/menu/folder_disabled.svg").default
+                }
+                alt="Categorias"
+              />
+            )}
 
-            <p>Categorias</p>
+            <p
+              style={{
+                color: currentPage === Pages.CATEGORIES ? "#0B7675" : "#727171",
+              }}
+            >
+              Categorias
+            </p>
           </div>
 
-          <div className="footer-nav-icon">
+          <div
+            className="footer-nav-icon"
+            onClick={() => changePage(Pages.ASSISTENCE)}
+          >
             <img
               src={require("../../../assets/message_write.svg").default}
               alt="Assistente"
             />
 
-            <p>Assistente</p>
+            <p
+              style={{
+                color: currentPage === Pages.ASSISTENCE ? "#0B7675" : "#727171",
+              }}
+            >
+              Busque Ajuda
+            </p>
           </div>
 
-          <div className="footer-nav-icon">
+          <div
+            className="footer-nav-icon"
+            onClick={() => changePage(Pages.PROFILE)}
+          >
             <img
               src={require("../../../assets/user_3.svg").default}
               alt="Assistente"
             />
-            <p>Seus dados</p>
+            <p
+              style={{
+                color: currentPage === Pages.PROFILE ? "#0B7675" : "#727171",
+              }}
+            >
+              Seus dados
+            </p>
           </div>
         </nav>
       </Content>
     </Container>
   );
-}
+};
+
+export default Footer;
 
 const Container = styled.div`
   display: flex;
@@ -59,6 +117,7 @@ const Container = styled.div`
   bottom: 0;
 
   padding: 12px;
+  background-color: var(--white);
 `;
 
 const Content = styled.div`
@@ -97,6 +156,8 @@ const Content = styled.div`
     color: #727171;
 
     text-align: center;
+
+    cursor: pointer;
 
     p {
       white-space: nowrap;

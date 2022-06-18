@@ -3,6 +3,8 @@ import React, { useContext, createContext, useState } from "react";
 enum Pages {
   HOME = "HOME",
   CATEGORIES = "CATEGORIES",
+  ASSISTENCE = "ASSISTENCE",
+  PROFILE = "PROFILE",
 }
 
 interface PagesContextData {
@@ -19,6 +21,7 @@ export const PagesProvider: React.FC<React.PropsWithChildren> = ({
   children,
 }) => {
   const [currentPage, setCurrentPage] = useState<Pages>(Pages.HOME);
+  console.log(currentPage);
 
   function changePage(page: Pages) {
     setCurrentPage(page);

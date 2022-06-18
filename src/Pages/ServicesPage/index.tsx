@@ -1,7 +1,7 @@
 import React from "react";
 import FilterRow from "../../compoments/Molecules/FilterRow";
 import ServicesCardList from "../../compoments/Organisms/ServicesCardList";
-import { SearchBar } from "../../compoments/SearchBar";
+import { SearchBar } from "../../compoments/Atoms/SearchBar";
 import HomeTemplate from "../../compoments/Template/HomeTemplate";
 import { categories, services } from "../../mock";
 

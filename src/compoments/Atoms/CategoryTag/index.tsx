@@ -67,6 +67,7 @@ const CategoryTagWrapper = styled.button<ICategoryTagWrapper>`
   p {
     color: #363434;
     font-weight: bold;
+    white-space: nowrap;
   }
 
   ${(props) =>

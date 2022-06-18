@@ -13,4 +13,6 @@ export interface CategoriesModel {
   id: string | number;
   title: string;
   enabled: boolean;
+  icon?: string;
+  color?: string;
 }

@@ -5,7 +5,7 @@ export function SearchBar() {
     <Content>
       <div className="search-bar">
         <div className="search-bar">
-          <img src={require("../../assets/lupa.svg").default} alt="Lupa" />
+          <img src={require("../../../assets/lupa.svg").default} alt="Lupa" />
 
           <input type="text" placeholder="Pesquise por serviços" />
         </div>

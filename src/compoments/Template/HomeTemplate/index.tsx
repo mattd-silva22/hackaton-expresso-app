@@ -22,6 +22,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 72px;
 `;
 
 export default HomeTemplate;
