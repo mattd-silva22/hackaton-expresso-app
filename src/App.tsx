@@ -1,14 +1,14 @@
-import { MyApp } from "./MyApp";
-import { PagesProvider } from "./Providers/PagesContext";
+import AppProvider from "./Providers/AppContext";
+import { MyApp } from "./Router";
 import { GlobalStyles } from "./styles/Global";
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <PagesProvider>
+      <AppProvider>
         <MyApp />
-      </PagesProvider>
+      </AppProvider>
     </>
   );
 }

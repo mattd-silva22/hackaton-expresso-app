@@ -64,14 +64,24 @@ const Footer: React.FC = () => {
             className="footer-nav-icon"
             onClick={() => changePage(Pages.ASSISTENCE)}
           >
-            <img
-              src={require("../../../assets/message_write.svg").default}
-              alt="Assistente"
-            />
-
+            {currentPage === Pages.ASSISTENCE ? (
+              <img
+                src={
+                  require("../../../assets/menu/message_enabled.svg").default
+                }
+                alt="Categorias"
+              />
+            ) : (
+              <img
+                src={
+                  require("../../../assets/menu/message_disabled.svg").default
+                }
+                alt="Categorias"
+              />
+            )}
             <p
               style={{
-                color: currentPage === Pages.ASSISTENCE ? "#0B7675" : "#727171",
+                color: currentPage === Pages.ASSISTENCE ? "#f7b518" : "#727171",
               }}
             >
               Busque Ajuda

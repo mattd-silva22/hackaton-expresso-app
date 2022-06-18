@@ -17,7 +17,9 @@ export const GlobalStyles = styled.createGlobalStyle`
     --primary-dark: #052153;
 
     --primary: #0b7675;
+    --secondary: #f7b518;
 
+    --gray-light: #727171;
     --neuter: #363434;
     --background-gradient: linear-gradient(
       124.21deg,
