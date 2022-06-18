@@ -32,19 +32,19 @@ export default function handleResponse(msg: MsgType) {
 
     return resposta;
   } else if (
-    msg.msg === "gostaria de marcar um atendimento no vaptvupt" ||
+    msg.msg === "Sim algum agendamento para hoje?" ||
     result[0]?.msg === "gostaria de marcar um atendimento no vaptvupt"
   ) {
     const resposta = {
       who: WhoType.server,
-      msg: "Temos horarios disponiveis para terça, quinta e sexta",
+      msg: "Sim. 08:30 - 02/07/2022 - Vapt Vupt Cidade Nova",
     };
 
     return resposta;
-  } else if (msg.msg === "sexta" || result[0]?.msg === "sexta") {
+  } else if (msg.msg === "Obrigado" || result[0]?.msg === "sexta") {
     const resposta = {
       who: WhoType.server,
-      msg: "Temos horario para 15:00, 15:30, 17:00",
+      msg: "Disponha!",
     };
 
     return resposta;
