@@ -6,10 +6,10 @@ const options = [
     msg: "Olá",
   },
   {
-    msg: "gostaria de marcar um atendimento no vaptvupt",
+    msg: "Sim algum agendamento para hoje?",
   },
   {
-    msg: "sexta",
+    msg: "Obrigado",
   },
   {
     msg: "15:00 por favor",
@@ -22,7 +22,6 @@ export default function handleResponse(msg: MsgType) {
   });
 
   const result = fuse.search(msg).map(({ item }) => item);
-  console.log(result);
 
   if (msg.msg === "oi" || result[0]?.msg === "oi") {
     const resposta = {
@@ -32,8 +31,8 @@ export default function handleResponse(msg: MsgType) {
 
     return resposta;
   } else if (
-    msg.msg === "Sim algum agendamento para hoje?" ||
-    result[0]?.msg === "gostaria de marcar um atendimento no vaptvupt"
+    msg.msg === "Sim tenho algum agendamento para hoje?" ||
+    result[0]?.msg === "Sim algum agendamento para hoje?"
   ) {
     const resposta = {
       who: WhoType.server,
@@ -41,7 +40,7 @@ export default function handleResponse(msg: MsgType) {
     };
 
     return resposta;
-  } else if (msg.msg === "Obrigado" || result[0]?.msg === "sexta") {
+  } else if (msg.msg === "Obrigado" || result[0]?.msg === "Obrigado") {
     const resposta = {
       who: WhoType.server,
       msg: "Disponha!",

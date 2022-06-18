@@ -59,7 +59,7 @@ const ServicePage: React.FC<IServicePage> = ({ show, service, onBack }) => {
             <ul>
               <li>
                 O Agendamento de Carteira de Identidade será realizado através
-                da plataforma digital: www.vaptvupt.go.gov.br/agendamento
+                da plataforma digital: www.vaptvupt. go.gov.br/agendamento
               </li>
               <li>
                 O agendamento será possível para 1ª VIA e para as 2ª VIA que
