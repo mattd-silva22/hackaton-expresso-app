@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
             </p>
           </div>
 
-          <div
+          {/* <div
             className="footer-nav-icon"
             onClick={() => changePage(Pages.PROFILE)}
           >
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
             >
               Seus dados
             </p>
-          </div>
+          </div> */}
         </nav>
       </Content>
     </Container>

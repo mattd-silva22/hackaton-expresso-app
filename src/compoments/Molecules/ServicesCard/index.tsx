@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ServicesModel } from "../../../models/services.model";
+import { useService } from "../../../Providers/ServiceContext";
 import { useServices } from "../../../Providers/ServicesContext";
 import ServicesTag from "../../Atoms/CategoryTag";
 
@@ -10,8 +11,9 @@ interface IServicesCard {
 
 const ServicesCard: React.FC<IServicesCard> = ({ service }) => {
   const { favorite } = useServices();
+  const { setCurrentService } = useService();
   return (
-    <ServicesCardWrapper>
+    <ServicesCardWrapper onClick={() => setCurrentService(service)}>
       <div className="icon-container">
         <img
           alt={service.title}
@@ -34,14 +36,20 @@ const ServicesCard: React.FC<IServicesCard> = ({ service }) => {
             src={require("../../../assets/heart_enabled.svg").default}
             alt="Favoritar serviço"
             height={22}
-            onClick={() => favorite(service.id)}
+            onClick={(e) => {
+              favorite(service.id);
+              e.stopPropagation();
+            }}
           />
         ) : (
           <img
             src={require("../../../assets/heart_disabled.svg").default}
             alt="Desfavoritar serviço"
             height={22}
-            onClick={() => favorite(service.id)}
+            onClick={(e) => {
+              favorite(service.id);
+              e.stopPropagation();
+            }}
           />
         )}
       </div>
@@ -57,6 +65,11 @@ const ServicesCardWrapper = styled.div`
   border-radius: 24px;
   height: 122px;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    border: 1px solid var(--primary);
+    cursor: pointer;
+  }
 
   & + & {
     margin-top: 24px;

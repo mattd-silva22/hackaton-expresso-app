@@ -9,8 +9,6 @@ const ChatbotPage: React.FC = () => {
   const { modalVisible, setModalVisible, handleSubmit, messages } =
     useChatbot();
 
-  
-
   return (
     <Modal show={modalVisible}>
       <ChatbotHeader onBack={() => setModalVisible(false)} />

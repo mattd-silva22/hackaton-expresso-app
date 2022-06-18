@@ -1,44 +1,82 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import Modal from "../../compoments/Atoms/Modal";
+import { ServicesModel } from "../../models/services.model";
+import { ServicePageWrapper } from "./styles";
 
-export default function ServicePage() {
-  return (
-    <Container>
-        <Content>
-
-            <header className='nav'>
-                <div className='back-btn'>
-                    <div className='back-btn-2'>back</div>
-                </div>
-
-                <svg width="70" height="56" viewBox="0 0 70 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M63 0H7C3.1395 0 0 3.1395 0 7V49C0 52.8605 3.1395 56 7 56H63C66.8605 56 70 52.8605 70 49V7C70 3.1395 66.8605 0 63 0ZM23.5025 14C27.531 14 30.5025 16.9715 30.5025 21C30.5025 25.0285 27.531 28 23.5025 28C19.474 28 16.5025 25.0285 16.5025 21C16.5025 16.9715 19.4705 14 23.5025 14ZM36.505 42H10.5V40.3725C10.5 35.567 16.366 30.625 23.5025 30.625C30.639 30.625 36.505 35.567 36.505 40.3725V42ZM59.5 38.5H45.5V31.5H59.5V38.5ZM59.5 24.5H42V17.5H59.5V24.5Z" fill="#606362"/>
-                </svg>
-
-                <h1>Obter carteira de identidade - 2ª via</h1>
-
-            </header>
-
-        </Content>
-    </Container>
-  )
+interface IServicePage {
+  show: boolean;
+  service?: ServicesModel;
+  onBack: () => void;
 }
 
+const ServicePage: React.FC<IServicePage> = ({ show, service, onBack }) => {
+  return (
+    <Modal show={show}>
+      {!!service && (
+        <ServicePageWrapper>
+          <div className="head">
+            <img
+              onClick={() => onBack()}
+              className="voltar"
+              alt="Voltar"
+              src={require("../../assets/voltar.svg").default}
+            />
+            <img
+              alt={service.title}
+              src={require("../../assets/services/document.svg").default}
+              height={56}
+            />
+            <h1>{service.title}</h1>
+            <div className="button-container">
+              <button type="button" className="ias-button">
+                Pedir ajuda da IAS
+              </button>
+              <button type="button" className="service-button">
+                Acessar Serviço
+              </button>
+            </div>
+          </div>
+          <div className="body">
+            <img
+              src={require("../../assets/processive-steps.svg").default}
+              alt="Barra de progresso - Passo 1"
+            />
+            <h1>Agendamento eletrônico</h1>
+            <ul>
+              <li>
+                O Agendamento de Carteira de Identidade será realizado através
+                da plataforma digital: www.vaptvupt.go.gov.br/agendamento
+              </li>
+              <li>
+                O agendamento será possível para 1ª VIA e para as 2ª VIA que
+                possuam cadastro no sistema Goiás Biométrico.
+              </li>
+              <li>
+                Em alguns casos de 2ª VIA, o requerente será notificado à
+                comparecer a uma unidade de atendimento.
+              </li>
+              <li>
+                O requerente deverá preencher um pré-cadastro através do site
+                citado acima, e após, agendar local e horário conforme sua
+                disponibilidade.
+              </li>
+              <li>Importante anotar o número de protocolo.</li>
+              <li>
+                Os itens na cor amarela deverão ser preenchidos
+                obrigatoriamente.
+              </li>
+              <li>
+                Caso o requerente não possua e-mail, deverá criar um e-mail
+                antes de realizar o agendamento, pois é um ítem de preenchimento
+                obrigatório, uma vez que as informações do agendamento serão
+                enviadas para o e-mail cadastrado.
+              </li>
+            </ul>
+          </div>
+        </ServicePageWrapper>
+      )}
+    </Modal>
+  );
+};
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-`
-
-
-const Content = styled.div`
-    .nav {
-
-    }
-`
-
-
+export default ServicePage;

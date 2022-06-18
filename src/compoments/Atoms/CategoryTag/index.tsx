@@ -85,6 +85,8 @@ const CategoryTagWrapper = styled.button<ICategoryTagWrapper>`
       &:hover {
         background: var(--background-gradient);
         border-color: var(--primary);
+        border: 0;
+        padding: 0.9rem;
 
         p {
           color: var(--white);
