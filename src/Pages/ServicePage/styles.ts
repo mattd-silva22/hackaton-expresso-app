@@ -84,12 +84,22 @@ export const ServicePageWrapper = styled.div`
       margin: 24px 0;
     }
 
+    ul {
+      list-style: disc;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      justify-content: center;
+    }
+
     li {
       font-weight: 700;
       font-size: 14px;
       line-height: 15px;
       color: #727171;
       text-align: left;
+      overflow-wrap: break-word;
     }
 
     li + li {

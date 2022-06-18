@@ -52,7 +52,7 @@ const ModalBody = styled.div<ModalBodyProps>`
   .modal-container {
     position: absolute;
     width: 100%;
-    min-height: 100%;
+    min-height: calc(100% + 60px);
     padding-bottom: 120px;
     max-width: 100vw;
     right: 0;

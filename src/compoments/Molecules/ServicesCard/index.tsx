@@ -61,9 +61,9 @@ const ServicesCardWrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
+  position: relative;
 
   border-radius: 24px;
-  height: 122px;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
 
   &:hover {
@@ -76,8 +76,8 @@ const ServicesCardWrapper = styled.div`
   }
 
   .icon-container {
-    height: 122px;
-    width: 122px;
+    min-height: 122px;
+    min-width: 122px;
     border-radius: 24px;
 
     background-color: rgba(120, 120, 120, 0.1);
@@ -105,6 +105,12 @@ const ServicesCardWrapper = styled.div`
       align-items: center;
 
       color: #727171;
+
+      @media (max-width: 480px) {
+        & {
+          font-size: 12px;
+        }
+      }
     }
 
     .subTile {
@@ -116,11 +122,21 @@ const ServicesCardWrapper = styled.div`
   }
 
   .heart-container {
+    position: absolute;
+
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding: 18px;
+    /* padding: 18px 18px; */
     cursor: pointer;
+    bottom: 8px;
+    right: 8px;
+
+    @media (max-width: 480px) {
+      & {
+        width: 1.8rems;
+      }
+    }
   }
 `;
 
