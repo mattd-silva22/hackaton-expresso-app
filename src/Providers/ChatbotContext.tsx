@@ -32,7 +32,6 @@ export const ChatbotProvider: React.FC<React.PropsWithChildren> = ({
   children,
 }) => {
   const [modalVisible, setModalVisible] = useState<boolean>(false);
-  const [userChoices, setUserChoices] = useState<string[]>([]);
   const [messages, setMessages] = useState<MsgType[]>([
     {
       who: WhoType.server,
