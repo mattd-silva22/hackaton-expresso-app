@@ -14,14 +14,6 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
 }) => {
   return (
     <ModalBody show={show} data-testid="modal-container">
-      {/* <div
-        className="close-button"
-        onClick={() => onClose()}
-        data-testid="modal-button"
-      >
-        <div className="menu-bars up" />
-        <div className="menu-bars down" />
-      </div> */}
       <div className="modal-container" data-testid="modal">
         {children}
       </div>
@@ -59,64 +51,10 @@ const ModalBody = styled.div<ModalBodyProps>`
       visibility: visible;
     `};
 
-  /* .close-button {
-    position: fixed;
-    top: 16px;
-    right: 16px;
-    z-index: 2;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-
-    transition: all 0.4s ease-in-out;
-
-    background-color: var(--white);
-
-    .menu-bars {
-      width: 35px;
-      height: 5px;
-      background-color: ${(props) => "#000"};
-      border-radius: 5px;
-      transition: all 0.4s ease-in-out;
-    }
-
-    .down {
-      position: fixed;
-    }
-
-    ${(props) =>
-    !props.show &&
-    css`
-      transform: translateX(480px);
-      visibility: hidden;
-    `};
-
-    ${(props) =>
-    props.show &&
-    css`
-      visibility: visible;
-
-      .up {
-        width: 35px;
-        transform: rotate(45deg);
-      }
-
-      .down {
-        width: 35px;
-        transform: rotate(-45deg);
-      }
-    `};
-  } */
-
   .modal-container {
     position: absolute;
-    height: 100%;
+    width: 100%;
+    padding-bottom: 120px;
     max-width: 100vw;
     right: 0;
     background-color: var(--white);

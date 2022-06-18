@@ -16,7 +16,12 @@ const ChatbotHeader: React.FC<IChatbotHeader> = ({ onBack }) => {
           onClick={() => onBack()}
         />
 
-        <img className="picture" src="" alt="Foto de perfil" />
+        <img
+          className="picture"
+          src={require("../../../assets/picture.png")}
+          alt="Foto de perfil"
+          height={50}
+        />
 
         <div className="name">
           <h1>Assistente Expresso</h1>
@@ -28,28 +33,27 @@ const ChatbotHeader: React.FC<IChatbotHeader> = ({ onBack }) => {
 };
 
 const ChatbotHeaderWrapper = styled.div`
-  padding: 14px 24px;
+  padding: 14px 0;
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
 
   .container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
     .back-button {
       cursor: pointer;
-      padding: 8px;
-    }
-
-    .picture {
-      border-radius: 50%;
-
-      height: 50px;
-      width: 50px;
+      padding: 24px;
     }
 
     .name {
       flex: 2;
-      margin-left: 12px;
+      margin-left: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
 
       h1 {
         font-weight: 400;

@@ -1,5 +1,5 @@
 import ChatBot from "../compoments/Chatbot";
-import AssistencePage from "../Pages/AssistencePage";
+import AssistencePage from "../Pages/AssistancePage";
 import CategoriesPage from "../Pages/CategoriesPage";
 import ProfilePage from "../Pages/ProfilePage";
 import ServicesPage from "../Pages/ServicesPage";
