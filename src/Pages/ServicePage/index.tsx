@@ -1,6 +1,9 @@
 import React from "react";
 import Modal from "../../compoments/Atoms/Modal";
 import { ServicesModel } from "../../models/services.model";
+import { useChatbot } from "../../Providers/ChatbotContext";
+import { usePages } from "../../Providers/PagesContext";
+import { useService } from "../../Providers/ServiceContext";
 import { ServicePageWrapper } from "./styles";
 
 interface IServicePage {
@@ -10,6 +13,9 @@ interface IServicePage {
 }
 
 const ServicePage: React.FC<IServicePage> = ({ show, service, onBack }) => {
+  const { changePage, Pages } = usePages();
+  const { setModalVisible } = useChatbot();
+  const { setCurrentService } = useService();
   return (
     <Modal show={show}>
       {!!service && (
@@ -28,7 +34,15 @@ const ServicePage: React.FC<IServicePage> = ({ show, service, onBack }) => {
             />
             <h1>{service.title}</h1>
             <div className="button-container">
-              <button type="button" className="ias-button">
+              <button
+                type="button"
+                className="ias-button"
+                onClick={() => {
+                  setCurrentService(undefined);
+                  changePage(Pages.ASSISTENCE);
+                  setModalVisible(true);
+                }}
+              >
                 Pedir ajuda da IAS
               </button>
               <button type="button" className="service-button">

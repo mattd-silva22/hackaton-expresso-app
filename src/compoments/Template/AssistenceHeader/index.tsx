@@ -12,20 +12,28 @@ const AssistenceHeader: React.FC = () => {
         className="Background"
       />
       <div className="header-container">
-        <h1>Olá, sou a</h1>
-        <h1>
-          <strong>Iasmin</strong>
-          <img
-            className="tchau"
-            src={require("../../../assets/tchau.svg").default}
-            alt="Olá"
-            width={16}
-            height={16}
-          />
-        </h1>
-        <button type="button" onClick={() => setModalVisible(true)}>
-          <p>Falar com a assistente</p>
-        </button>
+        <div className="title-container">
+          <h1>Olá, sou a</h1>
+          <h1>
+            <strong>Iasmin</strong>
+            <img
+              className="tchau"
+              src={require("../../../assets/tchau.svg").default}
+              alt="Olá"
+              width={16}
+              height={16}
+            />
+          </h1>
+          <button type="button" onClick={() => setModalVisible(true)}>
+            <p>Falar com a assistente</p>
+          </button>
+        </div>
+
+        <img
+          src={require("../../../assets/iasmim.png")}
+          alt="Rosto da Iasmim"
+          className="iasmim"
+        />
       </div>
     </AssistenceHeaderWrapper>
   );
@@ -35,6 +43,9 @@ const AssistenceHeaderWrapper = styled.div`
   width: 100%;
   height: 241px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(.jpg);
@@ -50,13 +61,27 @@ const AssistenceHeaderWrapper = styled.div`
   }
 
   .header-container {
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1000px;
+    padding: 24px;
+
+    .iasmim {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .title-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 24px;
-    padding-left: 20%;
     height: 100%;
+    flex: 1;
 
     h1 {
       color: var(--white);

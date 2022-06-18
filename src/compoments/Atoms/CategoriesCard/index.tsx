@@ -1,16 +1,34 @@
 import React from "react";
 import styled from "styled-components";
+import { usePages } from "../../../Providers/PagesContext";
+import { useServices } from "../../../Providers/ServicesContext";
 
 interface ICategoriesCard {
   color: string;
   icon: string;
   name: string;
+  id: string;
 }
 
-const CategoriesCard: React.FC<ICategoriesCard> = ({ color, icon, name }) => {
+const CategoriesCard: React.FC<ICategoriesCard> = ({
+  color,
+  icon,
+  name,
+  id,
+}) => {
+  const { Pages, changePage } = usePages();
+  const { addOrRemoveFilter } = useServices();
+
   return (
     <CategoriesCardWrapper>
-      <div className="icon-conteiner" style={{ backgroundColor: color }}>
+      <div
+        className="icon-conteiner"
+        style={{ backgroundColor: color }}
+        onClick={() => {
+          addOrRemoveFilter(id);
+          changePage(Pages.HOME);
+        }}
+      >
         <img
           src={require(`../../../assets/categories/${icon}.svg`)}
           alt={name}

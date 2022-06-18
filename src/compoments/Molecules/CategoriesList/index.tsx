@@ -18,6 +18,7 @@ const CategoriesList: React.FC<ICategoriesList> = ({ categories }) => {
           icon={category.icon || "agripecu"}
           name={category.title}
           key={category.id}
+          id={category.id as string}
         />
       ))}
     </CategoriesListWrapper>
