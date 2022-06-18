@@ -1,5 +1,6 @@
 {
   "name": "expresso-app",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +13,6 @@
     "@types/react-dom": "^18.0.0",
     "@types/styled-components": "^5.1.25",
     "fuse.js": "^6.6.2",
-    "moment": "^2.29.3",
     "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -44,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
